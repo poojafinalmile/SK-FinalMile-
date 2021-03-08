@@ -1,48 +1,45 @@
 <template>
   <section class="homepage">
     <!-- Vue tag to add header component -->
-    
+    <header-prismic/>
     <!-- Button to edit document in dashboard -->
     <prismic-edit-button :documentId="documentId"/>
-    <!-- <section class="homepage-banner" style="height: 15vh; width:100%"> -->
+    <section class="homepage-banner" style="height: 15vh; width:100%">
     <!-- Template for page title. -->
-    <!-- <header-prismic/> -->
-     <!-- <div class="custom-shape-divider-bottom-1611087996" style="position:relative"> -->
-       <!-- <div> -->
-          <!-- <div class="title"> 
-            <strong> final</strong>mile 
-           <img class="logo" src="../assets/img/logo_footprint.png" alt="Facebook" width="30" height="50">
-           </div> -->
-        
-
-        
+       <div>
+          <div class="title"> 
+            <strong> final</strong>mile <img class="logo" src="../assets/img/logo_footprint.png" alt="Facebook" width="30" height="50">
+          </div>
+          
         <!-- Template for page tagline -->
-<!--         
+        
        <h1 class="banner-description"> 
          <strong>{{ $prismic.richTextAsPlain(fields.tagline) }}</strong>
        </h1>
         
         <prismic-link class="banner-button" :field="fields.button_link">
           {{ $prismic.richTextAsPlain(fields.button_label) }}
-        </prismic-link> -->
-       <!-- <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-        <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" class="shape-fill"></path>
-        </svg> -->
-      <!-- </div> -->
+        </prismic-link>
+
+        <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+          <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" class="shape-fill"></path>
+        </svg>
+      </div>
       
-    <!-- </section> -->
-    
-      <!-- Slices block component -->
+    </section>
+          <!-- Slices block component -->
       <slices-block :slices="slices"/>
   </section>
 </template>
 
 <script>
 // imports for all components
+import HeaderPrismic from '../components/HeaderPrismic.vue'
 import SlicesBlock from '../components/SlicesBlock.vue'
 export default {
   name: 'home-page',
   components: {
+    HeaderPrismic,
     SlicesBlock
   },
   data () {
