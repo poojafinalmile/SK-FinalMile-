@@ -7,11 +7,13 @@
 
 <script>
 import FooterPrismic from './components/FooterPrismic.vue'
+//import HeaderPrismic from '../components/HeaderPrismic.vue'
 
 export default {
   name: 'App',
   components: {
     FooterPrismic
+   // HeaderPrismic
   }
 }
 </script>

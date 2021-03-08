@@ -13,14 +13,14 @@
 
 <script>
 // imports for all components
-import HeaderPrismic from '../components/HeaderPrismic.vue'
+//import HeaderPrismic from '../components/HeaderPrismic.vue'
 import SlicesBlock from '../components/SlicesBlock.vue'
 
 export default {
   name: 'page',
   components: {
-    HeaderPrismic,
-    SlicesBlock,
+   // HeaderPrismic,
+    SlicesBlock
   },
   data () {
     return {
