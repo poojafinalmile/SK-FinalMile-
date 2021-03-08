@@ -1,31 +1,31 @@
 <template>
  <div class="row py-2 py-sm-2 py-md-3 py-lg-5">
-    <div class="col-lg-8 col-md-10 mx-auto text-center">
+    <div class="col-xl-8 col-lg-10 col-md-10 mx-auto text-center">
      <prismic-rich-text :field="slice.primary.gallery_title"/>
     </div>
-    <div class="col-lg-8 col-md-10 mx-auto text-center">
+    <div class="col-xl-8 col-lg-10 col-md-10 mx-auto text-center">
       <div class="row" v-for="item in slice.items" :key="item.id">
-         <div class="col-lg-4 col-md-4">
-            <div class="col-lg-10 col-mid-10 mb-4 mb-md-0 m-md-auto px-5 padding-t-b-3 py-md-5 text-center bg-color-01">
+         <div class="col-xl-4 col-lg-4 col-md-4 d-flex align-bottom">
+            <div class="col-xxl-11 col-lg-12 col-md-12 mb-4 mb-md-0 m-md-auto px-5 px-md-1 px-lg-3 px-xxl-5 padding-t-b-3 py-md-5 text-center bg-color-01">
             <prismic-rich-text  class="h3 text-white" :field="item.image_description1"/>
             <prismic-rich-text class="desciption text-white" :field="item.desc1"/>
             </div>
          </div>
-         <div class="col-lg-4 col-md-4">
-            <div class="col-lg-10 col-mid-10 mb-4 mb-md-0 m-md-auto px-5 padding-t-b-3 py-md-6 text-center bg-color-02">
+         <div class="col-xl-4 col-lg-4 col-md-4 d-flex align-bottom">
+            <div class="col-xxl-11 col-lg-12 col-md-12 mb-4 mb-md-0 m-md-auto px-5 px-md-1 px-lg-3 px-xxl-5 padding-t-b-3 py-md-6 text-center bg-color-02">
             <prismic-rich-text  class="h3 text-white" :field="item.image_description2"/>
             <prismic-rich-text class="desciption text-white" :field="item.desc2"/>
             </div>
          </div>
-         <div class="col-lg-4 col-md-4">
-            <div class="col-lg-10 col-mid-10 m-md-auto px-5 padding-t-b-3 py-md-7 text-center bg-color-03">
+         <div class="col-xl-4 col-lg-4 col-md-4 d-flex align-bottom">
+            <div class="col-xxl-11 col-lg-12 col-md-12 m-md-auto px-5 px-md-1 px-lg-3 px-xxl-5 padding-t-b-3 py-md-7 text-center bg-color-03">
             <prismic-rich-text  class="h3 text-white" :field="item.image_description3"/>
             <prismic-rich-text class="desciption text-white"  :field="item.desc3"/>
             </div>
          </div>
       </div>
     </div>
-    <div class="col-lg-8 col-md-10 mx-auto text-center">
+    <div class="col-xl-8 col-lg-10 col-md-10 mx-auto text-center">
       <p class="pt-2 pt-md-3">
         <prismic-link  class="btn btn-circle" :field="slice.primary.link">{{ $prismic.richTextAsPlain(slice.primary.link_label) }}</prismic-link>
       </p>

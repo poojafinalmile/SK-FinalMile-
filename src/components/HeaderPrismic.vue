@@ -21,7 +21,6 @@
 
 <script>
 export default {
-  
   name: 'HeaderPrismic',
   data () {
     return {

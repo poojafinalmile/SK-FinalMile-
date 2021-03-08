@@ -1,16 +1,16 @@
 <template>
  <div class="row py-3 py-md-3 py-lg-5 my-4 my-md-0 custom-bg-color">
-    <div class="col-lg-8 col-md-10 mx-auto text-center">
+    <div class="col-xl-8 col-lg-10 col-md-10 mx-auto text-center">
       <div class="row">
-          <div class="col-lg-4 col-md-4 text-center">
+          <div class="col-xl-4 col-lg-4 col-md-4 text-center">
              <counter1></counter1>
             <prismic-rich-text class="text-white pt-2" :field="slice.primary.text1"/>
           </div>
-          <div class="col-lg-4 col-md-4 text-center">
+          <div class="col-xl-4 col-lg-4 col-md-4 text-center">
             <counter3></counter3>
             <prismic-rich-text class="text-white pt-2" :field="slice.primary.text5"/>
           </div>
-          <div class="col-lg-4 col-md-4 text-center">
+          <div class="col-xl-4 col-lg-4 col-md-4 text-center">
             <counter5></counter5>
             <prismic-rich-text class="text-white pt-2" :field="slice.primary.text11"/>
           </div>

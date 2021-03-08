@@ -33,10 +33,8 @@
       
     </section>
     
-    <div class="container">
       <!-- Slices block component -->
       <slices-block :slices="slices"/>
-    </div>
   </section>
 </template>
 
