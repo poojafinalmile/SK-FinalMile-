@@ -1,15 +1,15 @@
 <template>
   <header class="site-header">
-    <nav class="navbar navbar-expand-lg navbar-dark bg-trasparent">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-trasparent mobile-modified">
       <div class="container-fluid">
         <router-link to="/" class="logo ms-2 ms-md-3 ms-xl-5 text-white"><strong> final</strong>mile <img src="../assets/img/logo_footprint.png" alt="Finalmile" width="30" height="50"></router-link>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mobilenav" aria-controls="mobilenav" aria-expanded="false" aria-label="Toggle navigation">
+        <button onclick="ColoredBackgroundFunction()" class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mobilenav" aria-controls="mobilenav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="mobilenav">
+        <div class="collapse navbar-collapse" id="mobilenav" onclick="AjaxFunction()">
           <ul class="navbar-nav pt-5 px-3 px-sm-4 px-lg-0 pt-lg-0 ms-auto">
             <li v-for="menuLink in menuLinks" :key="menuLink.id" class="nav-item">
-              <prismic-link :field="menuLink.link" index class="nav-link fadeInDown">{{ $prismic.richTextAsPlain(menuLink.label) }}</prismic-link>
+              <prismic-link :field="menuLink.link" index class="nav-link text-uppercase fadeInDown">{{ $prismic.richTextAsPlain(menuLink.label) }}</prismic-link>
             </li>
           </ul>
         </div>
@@ -43,37 +43,20 @@ export default {
     this.getMenu()
   }
 }
-
-// Use only one out of these two
-// menu loading funtion one 
-// function docReady(fn) {
-//     if (document.readyState === "complete" || document.readyState === "interactive") {
-//         setTimeout(fn, 1);
-//     } else {
-//         document.addEventListener("DOMContentLoaded", fn);
-//     }
-// }  
-
-// docReady(function() {
-//     var BtnTarget = document.querySelector('.navbar-toggler-icon');
-//     BtnTarget.addEventListener('click',function (){
-//       document.querySelector("nav.navbar-expand-lg").classList.toggle("bg-dark");
-//     }); 
-// });
-// menu loading funtion two 
-setTimeout(function(){
-  var BtnTarget = document.querySelector('.navbar-toggler-icon');
-    BtnTarget.addEventListener('click',function (){
-      document.querySelector("nav.navbar-expand-lg").classList.toggle("bg-dark");
-    }); 
-}, 1000); 
 </script>
 
 <style>
+.site-header {
+  position: relative;
+}
+.navbar-dark .navbar-nav .nav-link.router-link-exact-active {
+  color: rgb(255 255 255);
+}
+
 .logo {
   text-decoration: none;
 }
-.navbar {
+.navbar.mobile-modified {
   position: absolute;
   width: 100%;
   top: 15px;
@@ -91,7 +74,7 @@ setTimeout(function(){
   }
 }
 @media (min-width: 992px) {
-  .navbar {
+  .navbar.mobile-modified {
     top: 15px;
   }
    .logo {
@@ -103,11 +86,12 @@ setTimeout(function(){
     z-index:3;
     height: 100vh;
   }
-  .navbar {
+  .navbar.mobile-modified {
     top: 0px;
   }
-  .navbar.bg-dark {
-    position: fixed;
+  .navbar.mobile-modified.colored-background {
+    background-color: #5b146f;
+    position:fixed;
   }
   .logo {
     font-size: 30px;
