@@ -34,33 +34,20 @@
         }
 
         function AjaxFunction() {
-            var element = document.querySelector("nav.navbar.navbar-expand-lg");
+            ColoredBackgroundFunction();
+            var element = document.querySelector("#mobilenav");
 
             if (element.classList) {
-                element.classList.toggle("colored-background");
+                element.classList.toggle("show");
             } else {
                 var classes = element.className.split(" ");
-                var i = classes.indexOf("colored-background");
-
-                if (i >= 0)
-                    classes.splice(i, 1);
-                else
-                    classes.push("colored-background");
-                element.className = classes.join(" ");
-            }
-            var elementTwo = document.querySelector("#mobilenav");
-
-            if (elementTwo.classList) {
-                elementTwo.classList.toggle("show");
-            } else {
-                var classes = elementTwo.className.split(" ");
-                var i = elementTwo.indexOf("show");
+                var i = classes.indexOf("show");
 
                 if (i >= 0)
                     classes.splice(i, 1);
                 else
                     classes.push("show");
-                elementTwo.className = classes.join(" ");
+                element.className = classes.join(" ");
             }
         }
     </script>

@@ -1,9 +1,8 @@
 <template>
-  <section class="page">
+  <section class="page" :documentId="documentId">
     <!-- Vue tag to add header component -->
     <header-prismic/>
     <!-- Button to edit document in dashboard -->
-    <!-- <prismic-edit-button :documentId="documentId"/> -->
         <div class="container-fluid homepage-banner mb-4 mb-lg-0">
           <div class="row">
               <div class="col-xl-12 col-md-12 col-sm-12 col-xs-12 py-4 m-2 py-lg-5 m-lg-0 text-center">
