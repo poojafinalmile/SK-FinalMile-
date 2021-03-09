@@ -22,6 +22,9 @@
                     <input type="text" name="userEmail" class="form-control" placeholder="EMAIL" value="" required>
                 </div>
                 <div class="mb-3">
+                    <input type="text" name="userCompany" class="form-control" placeholder="COMPANY (IF APPLICABLE)" value="">
+                </div>
+                <div class="mb-3">
                     <textarea name="userMsg" class="form-control" placeholder="MESSAGE" style="width: 100%; height: 150px;"></textarea>
                 </div>
                 <div class="mt-3">
