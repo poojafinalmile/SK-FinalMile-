@@ -21,7 +21,7 @@
 <script>
 export default {
   props: ['slice'],
-  name: 'about-slice'
+  name: 'work-slice'
 }
 </script>
 
