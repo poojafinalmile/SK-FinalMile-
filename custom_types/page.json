@@ -1005,6 +1005,16 @@
               },
               "repeat" : { }
             },
+            "career_slice" : {
+              "type" : "Slice",
+              "fieldset" : "Career Slice",
+              "description" : "Career  Slice",
+              "icon" : "star",
+              "non-repeat" : {
+                
+              },
+              "repeat" : { }
+            },
             "description_link" : {
               "type" : "Slice",
               "fieldset" : "Description Link",
