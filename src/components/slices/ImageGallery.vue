@@ -1,14 +1,16 @@
 <template>
-    <div class="row py-2 py-sm-2 py-md-3 py-lg-5">
-      <div class="col-xl-8 col-lg-10 col-md-10 mx-auto text-center gallery">
+    <div class="row">
+      <div class="col-xl-8 col-lg-12 col-md-12 mx-auto text-center gallery">
         <div class="row">
-          <div class="col-xl-12 col-lg-12 col-md-12 mx-auto text-center">
-            <prismic-rich-text :field="slice.primary.gallery_title"/>
-          </div>
+          <template v-if="$prismic.richTextAsPlain(slice.primary.gallery_title) !== ''">
+            <div class="col-xl-12 col-lg-12 col-md-12 mx-auto text-center">
+              <prismic-rich-text :field="slice.primary.gallery_title" :class="'title pb-4'"/>
+            </div>
+          </template>
           <template v-for="(item,index) in slice.items">
               <template v-if="index <= 2">
-                <div :class="'col-xl-4 col-lg-4 col-md-6 col-xs-12 mb-4 mb-md-0 mx-auto px-0 text-center gallery-item item-'+ index" :key="item.id">
-                  <div class="gallery-item-inner width-detect">
+                <div v-bind:class="'col-xl-' + (12/slice.items.length) + ' col-lg-' + (12/slice.items.length) + ' col-md-6 col-xs-12 mb-4 mb-md-0 mx-auto px-0 text-center gallery-item item-'+ index" :key="item.id + value">
+                  <div class="gallery-item-inner">
                     <prismic-image :field="item.image" class="img-responsive"/>
                       <div class="gallery-item-text-area">
                         <div class="gallery-item-desciption d-inline-block align-middle text-white p-4 m-0">
@@ -22,7 +24,7 @@
                 </div>
               </template>
               <template v-else-if="index >= 3">
-                <div :class="'col-xl-6 col-lg-6 col-md-6 col-xs-12 mb-4 mb-md-0 mx-auto px-0 text-center gallery-item item-'+ index" :key="item.id">
+                <div v-bind:class="'col-xl-' + (12/slice.items.length) + ' col-lg-' + (12/slice.items.length) + ' col-md-6 col-xs-12 mb-4 mb-md-0 mx-auto px-0 text-center gallery-item item-'+ index" :key="item.id">
                   <div class="gallery-item-inner">
                     <prismic-image :field="item.image" class="img-responsive"/>
                       <div class="gallery-item-text-area">
@@ -42,29 +44,31 @@
   </div>
 </template>
 
+
+
 <script>
 export default {
   props: ['slice'],
   name: 'image-gallery'
 }
 
-function imageresize(target) {
-    var width = target.offsetWidth / 1.2;
-    console.log(target.children[0].height, width);
-    target.children[0].height = width;
-}
-window.addEventListener('load', (event) => {
-    var target = document.querySelectorAll(".width-detect") ? document.querySelectorAll(".width-detect") : null;
-    if (target != null && window.innerWidth >= 992) {
-        target.forEach(function(find) {
-            imageresize(find);
-        });
-    }
-});
+// function imageresize(target) {
+//     var width = target.offsetWidth / 1.2;
+//     console.log(target.children[0].height, width);
+//     target.children[0].height = width;
+// }
+// window.addEventListener('load', (event) => {
+//     var target = document.querySelectorAll(".width-detect") ? document.querySelectorAll(".width-detect") : null;
+//     if (target != null && window.innerWidth >= 992) {
+//         target.forEach(function(find) {
+//             imageresize(find);
+//         });
+//     }
+// });
 </script>
 
 <style scoped>
-@media (min-width: 992px) {
+/* @media (min-width: 992px) {
   .width-detect img {
     min-height: 230px;
   }
@@ -87,7 +91,7 @@ window.addEventListener('load', (event) => {
 .width-detect img {
    min-height: 352px;
    object-fit: cover;
-}
+} */
 .gallery-item {
   position: relative;
 }
