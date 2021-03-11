@@ -9,9 +9,11 @@
               <prismic-rich-text class="h5 heading-custom-color" :field="slice.primary.text"/>
               <prismic-rich-text class="custom-color h1 fw-bold pb-md-2" :field="slice.primary.testing"/>
               <prismic-rich-text class="description fw-light" :field="slice.primary.headline"/>
-              <p class="pt-2 pt-md-3">
-                <prismic-link  class="btn btn-circle" :field="slice.primary.link">{{ $prismic.richTextAsPlain(slice.primary.link_label) }}</prismic-link>
-              </p>
+              <template v-if="$prismic.richTextAsPlain(slice.primary.link_label) !== ''">
+                <p class="pt-2 pt-md-3">
+                  <prismic-link  class="btn btn-circle" :field="slice.primary.link">{{ $prismic.richTextAsPlain(slice.primary.link_label) }}</prismic-link>
+                </p>
+              </template>
           </div>
         </div>
     </div>
@@ -27,6 +29,7 @@ export default {
 
 <style scoped>
 .btn-circle {
+  text-decoration: none;
   color: #5b146f;
   border:2px solid #5b146f;
   border-radius: 48px;

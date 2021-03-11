@@ -13,7 +13,9 @@
                       <div class="gallery-item-text-area">
                         <div class="gallery-item-desciption d-inline-block align-middle text-white p-4 m-0">
                           <div class="d-block mb-4"><prismic-rich-text :field="item.image_description"/></div>
+                           <template v-if="$prismic.richTextAsPlain(item.link_label) !== ''">
                             <prismic-link :field="item.link" class="btn-circle">{{ $prismic.richTextAsPlain(item.link_label) }}</prismic-link>
+                           </template>
                           </div>
                       </div>
                   </div>
@@ -26,7 +28,9 @@
                       <div class="gallery-item-text-area">
                         <div class="gallery-item-desciption d-inline-block align-middle text-white p-4 m-0">
                           <div class="d-block mb-4"><prismic-rich-text :field="item.image_description"/></div>
+                            <template v-if="$prismic.richTextAsPlain(item.link_label) !== ''">
                             <prismic-link :field="item.link" class="btn-circle">{{ $prismic.richTextAsPlain(item.link_label) }}</prismic-link>
+                            </template>
                           </div>
                       </div>
                   </div>

@@ -26,9 +26,11 @@
       </div>
     </div>
     <div class="col-xl-8 col-lg-10 col-md-10 mx-auto text-center">
-      <p class="pt-2 pt-md-3">
-        <prismic-link  class="btn btn-circle" :field="slice.primary.link">{{ $prismic.richTextAsPlain(slice.primary.link_label) }}</prismic-link>
-      </p>
+      <template v-if="$prismic.richTextAsPlain(slice.primary.link_label) !== ''">
+        <p class="pt-2 pt-md-3">
+          <prismic-link  class="btn btn-circle" :field="slice.primary.link">{{ $prismic.richTextAsPlain(slice.primary.link_label) }}</prismic-link>
+        </p>
+      </template>
     </div>
   </div>
 </template>
@@ -67,6 +69,19 @@ export default {
     padding-bottom: 6rem;
   }
 }
+.btn-circle {
+ text-decoration: none;
+  color: #ff009c;
+  border:2px solid #ff009c;
+  border-radius: 48px;
+  padding: 10px 20px;
+}
+.btn-circle:hover {
+  color: #fff;
+  border:2px solid #fff;
+  background: #ff009c;
+}
+
 .gallery-item {
   display: flex;
   align-items: flex-end;
