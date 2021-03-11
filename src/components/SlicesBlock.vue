@@ -102,6 +102,10 @@
             <template v-else-if="slice.slice_type === 'case_slice'">
                 <case-slice :slice="slice"/>
             </template>
+            <!-- Career  slice component -->
+            <template v-else-if="slice.slice_type === 'career_slice'">
+                <career-slice :slice="slice"/>
+            </template>
             
             
         </section>
@@ -135,6 +139,7 @@ const DescSlice = () => import("./slices/DescSlice.vue");
 const ImageSlice = () => import("./slices/ImageSlice.vue");
 const ApproachSlice = () => import("./slices/ApproachSlice.vue");
 const CaseSlice = () => import("./slices/CaseSlice.vue");
+const CareerSlice = () => import("./slices/CareerSlice.vue");
 
 export default {
   props: ['slices'],
@@ -164,7 +169,8 @@ export default {
     DescSlice,
     ImageSlice,
     ApproachSlice,
-    CaseSlice
+    CaseSlice,
+    CareerSlice
     
   },
 }
