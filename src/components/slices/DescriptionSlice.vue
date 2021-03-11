@@ -1,9 +1,9 @@
 <template>
    <div class="row py-2 py-sm-2 py-md-3 py-lg-5">
     <div class="col-xl-8 col-lg-10 col-md-10 mx-auto text-center">
-      <prismic-rich-text class="h5 heading-custom-color" :field="slice.primary.text"/>
-      <prismic-rich-text class="custom-color h1 fw-bold pb-md-2" :field="slice.primary.testing"/>
-      <prismic-rich-text class="description fw-light" :field="slice.primary.headline"/>
+      <prismic-rich-text class="h5 heading-custom-color" :field="slice.primary.Band_name"/>
+      <prismic-rich-text class="custom-color h1 fw-bold pb-md-2" :field="slice.primary.title"/>
+      <prismic-rich-text class="description fw-light" :field="slice.primary.description_body"/>
       <template v-if="$prismic.richTextAsPlain(slice.primary.link_label) !== ''">
         <p class="pt-2 pt-md-3">
           <prismic-link  class="'btn btn-circle" :field="slice.primary.link">{{ $prismic.richTextAsPlain(slice.primary.link_label) }}</prismic-link>
