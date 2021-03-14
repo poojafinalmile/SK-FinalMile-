@@ -50,7 +50,7 @@
             <template v-else-if="slice.slice_type === 'brand_outlet'">
                 <brand-outlet :slice="slice"/>
             </template>
-             <!-- Description Slice slice component -->
+             <!-- Description Slice slice component-->
             <template v-else-if="slice.slice_type === 'description_slice'">
                 <description-slice :slice="slice"/>
             </template>

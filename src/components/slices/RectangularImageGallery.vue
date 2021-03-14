@@ -2,9 +2,9 @@
     <div class="row">
       <div class="col-xl-8 col-lg-12 col-md-12 mx-auto text-center gallery">
         <div class="row">
-          <template v-if="$prismic.richTextAsPlain(slice.primary.gallery_title) !== ''">
+          <template v-if="$prismic.richTextAsPlain(slice.primary.title) !== ''">
             <div class="col-xl-12 col-lg-12 col-md-12 mx-auto text-center">
-              <prismic-rich-text :field="slice.primary.gallery_title" :class="'title pb-4'"/>
+              <prismic-rich-text :field="slice.primary.title" :class="'title pb-4'"/>{{$prismic.Color(slice.primary.title_color)}}
             </div>
           </template>
           <template v-for="(item,index) in slice.items">
