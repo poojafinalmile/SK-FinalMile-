@@ -52,7 +52,7 @@
             "type": "Slices",
             "fieldset": "Slice zone",
             "config": {
-                "labels": null,
+                "labels": {},
                 "choices": {
                     "text_section": {
                         "type": "Slice",
@@ -1070,18 +1070,18 @@
                                     "label": "Band name color"
                                 }
                             },
-                            "title_color": {
-                                "type": "Color",
-                                "config": {
-                                    "label": "Title color"
-                                }
-                            },
                             "title": {
                                 "type": "StructuredText",
                                 "config": {
                                     "multi": "paragraph, preformatted, heading1, heading2, heading3, heading4, heading5, heading6, strong, em, hyperlink, image, embed, list-item, o-list-item, rtl",
                                     "label": "Title",
                                     "placeholder": "Title"
+                                }
+                            },
+                            "title_color": {
+                                "type": "Color",
+                                "config": {
+                                    "label": "Title color"
                                 }
                             },
                             "subtitle": {

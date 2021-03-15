@@ -70,6 +70,7 @@ export default {
         .then((document) => {
           
           if (document) {
+            this.documentId = document.id
             //Set slices as variable
             this.slices = document.data.page_content
           } 
