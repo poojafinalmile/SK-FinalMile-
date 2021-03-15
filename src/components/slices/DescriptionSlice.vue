@@ -18,7 +18,27 @@
 <script>
 export default {
   props: ['slice'],
-  name: 'description-slice'
+  name: 'description-slice',
+    data () {
+      return {
+        fields: {
+         bandNameColor: null
+        }
+      };
+    },
+    methods: {
+      // This is an example query, the important part is above.
+      getContent () {
+        this.$prismic.client.getSingle('page')
+          .then((document) => {
+            this.fields.bandNameColor = document.data.page_content.band_name_color;
+            console.log(document.data.band_name_color);
+          })
+      }
+    },
+    created () {
+      this.getContent();
+    }
 }
 </script>
 
@@ -38,8 +58,10 @@ export default {
 .title-custom-color{
   color:#5b146f;
 }
-
 .heading-custom-color{
   color: #ff009c;
+}
+.description {
+  color: #464646;
 }
 </style>

@@ -7,7 +7,7 @@
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="mobilenav" onclick="AjaxFunction()">
-          <ul class="navbar-nav pt-5 px-3 px-sm-4 px-lg-0 pt-lg-0 ms-auto">
+          <ul class="navbar-nav pt-5 px-3 px-sm-4 px-lg-0 pt-lg-0 ms-auto me-xl-5">
             <li v-for="menuLink in menuLinks" :key="menuLink.id" class="nav-item">
               <prismic-link :field="menuLink.link" index class="nav-link text-uppercase fadeInDown">{{ $prismic.richTextAsPlain(menuLink.label) }}</prismic-link>
             </li>
