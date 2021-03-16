@@ -4,11 +4,11 @@
         <div class="row">
           <template v-if="$prismic.richTextAsPlain(slice.primary.title) !== ''">
             <div class="col-xl-12 col-lg-12 col-md-12 mx-auto text-center">
-              <prismic-rich-text :field="slice.primary.title" :class="'title-custom-color mb-3 mb-md-4'"/>
+              <prismic-rich-text :field="slice.primary.title" :class="'title-custom-color mb-3 mb-md-4 mb-xl-5'"/>
             </div>
           </template>
           <template v-for="(item,index) in slice.items">
-            <div :key="item.id" :class="'col-xl-' + (12/slice.items.length) + ' col-lg-' + (12/slice.items.length) + ' col-md-6 col-xs-12 mb-4 mb-md-0 mx-auto px-0 text-center gallery-item item-'+ index">
+            <div :key="item.id" :class="'col-xl-4 col-lg-4 col-md-6 col-xs-12 mb-4 mb-md-0 mx-auto px-0 text-center gallery-item item-'+ index">
               <div class="gallery-item-inner">
                 <prismic-image :field="item.main_image" class="img-responsive"/>
                   <div class="gallery-item-text-area">
@@ -30,7 +30,7 @@
 <script>
 export default {
   props: ['slice'],
-  name: 'square-image-gallery'
+  name: 'profile-slice'
 }
 </script>
 

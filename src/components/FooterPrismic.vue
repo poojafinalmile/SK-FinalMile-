@@ -7,7 +7,7 @@
             <div class="ms-md-3 ms-xl-5">
               <p class="h1 text-lg-start text-md-start text-white m-0 p-0"><strong>final</strong>mile</p>
               <p class="text-lg-start text-md-start text-white m-0 p-0 zero-line-height v-small"><strong>Turbo changing</strong> your business ventures</p>
-              <p class="col-lg-9 col-md-11 text-md-start text-lg-start text-white mt-4 mt-lg-5 p-0 small"> We come from the bottom of the world where inventiveness and grit come together naturally to create potential. <br>Our job is to catapult kiwi ventures to unlock their business possibilities. As owners we love what we do and it’s time to share that know-how with you.  </p>
+              <p class="col-lg-9 col-md-11 text-md-start text-lg-start text-white mt-4 mt-lg-5 p-0 small"> We come from the bottom of the world where inventiveness and grit come together naturally to create potential. Our job is to catapult kiwi ventures to unlock their business possibilities. As owners we love what we do and it’s time to share that know-how with you.  </p>
             </div>
           </div>
           <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12">
@@ -19,8 +19,8 @@
           </div>
           <div class="col-xl-3 col-lg-3 col-md-4 col-sm-12">
             <ul class="list-group list-group-flush ms-xl-5 mb-lg-0 mt-4 mt-sm-0 p-0">
-              <li class="text-lg-start text-md-start text-mb-start list-group-item bg-transparent border-bottom-0 m-0 p-1 colored-text">Email : <a class="text-white text-decoration-none" href="tel:+068766773" ><em>06 8766773</em></a></li>
-              <li class="text-lg-start text-md-start text-mb-start list-group-item bg-transparent border-bottom-0 m-0 p-1 colored-text">Phone : <a class="text-white text-decoration-none" href="mailto:webstore@thebrandoutlet.co.nz"><em>webstore@thebrandoutlet.co.nz</em></a></li>
+              <li class="text-lg-start text-md-start text-mb-start list-group-item bg-transparent border-bottom-0 m-0 p-1 fm-pink">Email : <a class="text-white text-decoration-none" href="tel:+068766773" ><em>06 8766773</em></a></li>
+              <li class="text-lg-start text-md-start text-mb-start list-group-item bg-transparent border-bottom-0 m-0 p-1 fm-pink">Phone : <a class="text-white text-decoration-none" href="mailto:webstore@thebrandoutlet.co.nz"><em>webstore@thebrandoutlet.co.nz</em></a></li>
             </ul>
             <div class="street-address ms-xl-5 mb-lg-0 mt-4 mt-sm-0 pt-sm-1 pt-md-4">
               <p class="text-lg-start text-md-start text-mb-start m-0 p-1 text-white"></P>
@@ -87,11 +87,10 @@ export default {
 
 <style scoped> 
 .main-footer {background: #5b146f;}
-.colored-text {color: rgb(219, 59, 86);}
 .street-address p {font-size:14px;}
 .copyright {font-size: 10px;}
 .btn-circle {
-  background-color: #ff009c;
+  background-color: #e10098;
   width: 40px;
   height: 40px;
   padding: 12px 12px;

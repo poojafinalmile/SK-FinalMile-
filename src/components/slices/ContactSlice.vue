@@ -17,7 +17,7 @@
                     <input type="text" name="userPhone" class="form-control" placeholder="TELEPHONE" value="" required>
                 </div>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-6 text-md-start">
                 <div class="mb-3">
                     <input type="text" name="userEmail" class="form-control" placeholder="EMAIL" value="" required>
                 </div>
@@ -29,6 +29,12 @@
                 </div>
                 <div class="mt-3">
                     <input type="submit" name="Submit" class="btn btn-circle" value="Submit">
+                </div>
+                <div class="mt-5">
+                     <ul class="list-group list-group-flush text-start m-0 p-0">
+                        <li class="list-group-item bg-transparent border-bottom-0 m-0 p-1 fm-pink">Email : <a class="text-decoration-none fm-black" href="tel:+068766773" ><em>06 8766773</em></a></li>
+                        <li class="list-group-item bg-transparent border-bottom-0 m-0 p-1 fm-pink">Phone : <a class="text-decoration-none fm-black" href="mailto:webstore@thebrandoutlet.co.nz"><em>webstore@thebrandoutlet.co.nz</em></a></li>
+                      </ul>
                 </div>
             </div>
           </div>
@@ -45,6 +51,9 @@ export default {
 </script>
 
 <style>
+.form-control,.form-select {
+  border:1px solid #5b146f;
+}
 .btn-circle {
   color: #5b146f;
   border:2px solid #5b146f;

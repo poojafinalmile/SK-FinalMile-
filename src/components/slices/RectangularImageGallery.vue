@@ -8,21 +8,21 @@
             </div>
           </template>
           <template v-for="(item,index) in slice.items">
-                <div :key="item.id" :class="'col-xl-' + (12/slice.items.length) + ' col-lg-' + (12/slice.items.length) + ' col-md-6 col-xs-12 mb-4 mb-md-0 mx-auto px-0 text-center gallery-item item-'+ index">
-                  <div class="gallery-item-inner">
-                    <prismic-image :field="item.image" class="img-responsive"/>
-                      <div class="gallery-item-text-area">
-                        <div class="gallery-item-desciption d-inline-block align-middle text-white p-4 m-0">
-                          <div class="d-block"><prismic-rich-text :field="item.image_title"/></div>
-                          <div class="d-block"><prismic-rich-text :field="item.image_description"/></div>
-                           <template v-if="$prismic.richTextAsPlain(item.label) !== ''">
-                             <div class="mt-4"><prismic-link :field="item.link" class="btn-circle">{{ $prismic.richTextAsPlain(item.label) }}</prismic-link></div>
-                           </template>
-                          </div>
+            <div :key="item.id" :class="'col-xl-' + (12/slice.items.length) + ' col-lg-' + (12/slice.items.length) + ' col-md-6 col-xs-12 mb-4 mb-md-0 mx-auto px-0 text-center gallery-item item-'+ index">
+              <div class="gallery-item-inner">
+                <prismic-image :field="item.image" class="img-responsive"/>
+                  <div class="gallery-item-text-area">
+                    <div class="gallery-item-desciption d-inline-block align-middle text-white p-4 m-0">
+                      <div class="d-block"><prismic-rich-text :field="item.image_title"/></div>
+                      <div class="d-block"><prismic-rich-text :field="item.image_description"/></div>
+                        <template v-if="$prismic.richTextAsPlain(item.label) !== ''">
+                          <div class="mt-4"><prismic-link :field="item.link" class="btn-circle">{{ $prismic.richTextAsPlain(item.label) }}</prismic-link></div>
+                        </template>
                       </div>
                   </div>
-                </div>
-            </template>
+              </div>
+            </div>
+          </template>
         </div>
     </div>
   </div> 
@@ -32,47 +32,9 @@ export default {
   props: ['slice'],
   name: 'rectangular-image-gallery'
 }
-
-// function imageresize(target) {
-//     var width = target.offsetWidth / 1.2;
-//     console.log(target.children[0].height, width);
-//     target.children[0].height = width;
-// }
-// window.addEventListener('load', (event) => {
-//     var target = document.querySelectorAll(".width-detect") ? document.querySelectorAll(".width-detect") : null;
-//     if (target != null && window.innerWidth >= 992) {
-//         target.forEach(function(find) {
-//             imageresize(find);
-//         });
-//     }
-// });
 </script>
 
 <style scoped>
-/* @media (min-width: 992px) {
-  .width-detect img {
-    min-height: 230px;
-  }
-}
-@media (min-width: 1200px) {
-.width-detect img {
-    min-height: 222px;
-  }
-}
-@media (min-width: 1400px) {
-.width-detect img {
-    min-height: 259px;
-  }
-}
-@media (min-width: 1600px) {
-  .width-detect img {
-    min-height: 296px;
-  }
-}
-.width-detect img {
-   min-height: 352px;
-   object-fit: cover;
-} */
 .gallery-item {
   position: relative;
 }

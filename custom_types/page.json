@@ -79,8 +79,17 @@
                             "quote_text": {
                                 "type": "StructuredText",
                                 "config": {
-                                    "single": "paragraph",
-                                    "label": "Quote Text"
+                                    "single": "paragraph, preformatted, heading1, heading2, heading3, heading4, heading5, heading6, strong, em, hyperlink, image, embed, list-item, o-list-item, rtl",
+                                    "label": "Quote Text",
+                                    "placeholder": "Quote Text"
+                                }
+                            },
+                            "author": {
+                                "type": "StructuredText",
+                                "config": {
+                                    "multi": "paragraph, preformatted, heading1, heading2, heading3, heading4, heading5, heading6, strong, em, hyperlink, image, embed, list-item, o-list-item, rtl",
+                                    "label": "author",
+                                    "placeholder": "Author"
                                 }
                             }
                         },
@@ -92,15 +101,78 @@
                         "description": "A wide, thin image",
                         "icon": "broken_image",
                         "non-repeat": {
+                            "master_title": {
+                                "type": "StructuredText",
+                                "config": {
+                                    "multi": "paragraph, preformatted, heading1, heading2, heading3, heading4, heading5, heading6, strong, em, hyperlink, image, embed, list-item, o-list-item, rtl",
+                                    "label": "Master title",
+                                    "placeholder": "Master title"
+                                }
+                            },
                             "image": {
                                 "type": "Image",
                                 "config": {
                                     "constraint": {
-                                        "width": 10000,
-                                        "height": 6000
+                                        "width": null,
+                                        "height": null
                                     },
                                     "thumbnails": [],
                                     "label": "Image"
+                                }
+                            },
+                            "title": {
+                                "type": "StructuredText",
+                                "config": {
+                                    "multi": "paragraph, preformatted, heading1, heading2, heading3, heading4, heading5, heading6, strong, em, hyperlink, image, embed, list-item, o-list-item, rtl",
+                                    "label": "Title",
+                                    "placeholder": "Title"
+                                }
+                            },
+                            "title_color": {
+                                "type": "Color",
+                                "config": {
+                                    "label": "Title color"
+                                }
+                            },
+                            "subtitle": {
+                                "type": "StructuredText",
+                                "config": {
+                                    "multi": "paragraph, preformatted, heading1, heading2, heading3, heading4, heading5, heading6, strong, em, hyperlink, image, embed, list-item, o-list-item, rtl",
+                                    "label": "Subtitle",
+                                    "placeholder": "Subtitle"
+                                }
+                            },
+                            "subtitle_color": {
+                                "type": "Color",
+                                "config": {
+                                    "label": "Subtitle color"
+                                }
+                            },
+                            "link": {
+                                "type": "Link",
+                                "config": {
+                                    "label": "link",
+                                    "placeholder": "Url"
+                                }
+                            },
+                            "label": {
+                                "type": "StructuredText",
+                                "config": {
+                                    "multi": "paragraph, preformatted, heading1, heading2, heading3, heading4, heading5, heading6, strong, em, hyperlink, image, embed, list-item, o-list-item, rtl",
+                                    "label": "Label",
+                                    "placeholder": "Label"
+                                }
+                            },
+                            "color_set": {
+                                "type": "Color",
+                                "config": {
+                                    "label": "Color set"
+                                }
+                            },
+                            "color_set_hover": {
+                                "type": "Color",
+                                "config": {
+                                    "label": "Color set hover"
                                 }
                             }
                         },
@@ -1174,6 +1246,99 @@
                                 }
                             }
                         }
+                    },
+                    "profile_slice": {
+                        "type": "Slice",
+                        "fieldset": "Profile Slice",
+                        "description": "Profile Slice, image, title, description",
+                        "icon": "account_circle",
+                        "display": "list",
+                        "non-repeat": {
+                            "title": {
+                                "type": "StructuredText",
+                                "config": {
+                                    "multi": "paragraph, preformatted, heading1, heading2, heading3, heading4, heading5, heading6, strong, em, hyperlink, image, embed, list-item, o-list-item, rtl",
+                                    "label": "title",
+                                    "placeholder": "Title"
+                                }
+                            },
+                            "title_color": {
+                                "type": "Color",
+                                "config": {
+                                    "label": "title color"
+                                }
+                            }
+                        },
+                        "repeat": {
+                            "main_image": {
+                                "type": "Image",
+                                "config": {
+                                    "constraint": {},
+                                    "thumbnails": [],
+                                    "label": "Main image"
+                                }
+                            },
+                            "image_title": {
+                                "type": "StructuredText",
+                                "config": {
+                                    "multi": "paragraph, preformatted, heading1, heading2, heading3, heading4, heading5, heading6, strong, em, hyperlink, image, embed, list-item, o-list-item, rtl",
+                                    "label": "Image title",
+                                    "placeholder": "Image title"
+                                }
+                            },
+                            "image_description": {
+                                "type": "StructuredText",
+                                "config": {
+                                    "multi": "paragraph, preformatted, heading1, heading2, heading3, heading4, heading5, heading6, strong, em, hyperlink, image, embed, list-item, o-list-item, rtl",
+                                    "label": "Image description",
+                                    "placeholder": "Image description"
+                                }
+                            },
+                            "link": {
+                                "type": "Link",
+                                "config": {
+                                    "label": "Link",
+                                    "placeholder": "Url"
+                                }
+                            },
+                            "label": {
+                                "type": "StructuredText",
+                                "config": {
+                                    "multi": "paragraph, preformatted, heading1, heading2, heading3, heading4, heading5, heading6, strong, em, hyperlink, image, embed, list-item, o-list-item, rtl",
+                                    "label": "Label",
+                                    "placeholder": "Label"
+                                }
+                            },
+                            "color_set": {
+                                "type": "Color",
+                                "config": {
+                                    "label": "Color Set"
+                                }
+                            },
+                            "color_set_hover": {
+                                "type": "Color",
+                                "config": {
+                                    "label": "Color set hover"
+                                }
+                            }
+                        }
+                    },
+                    "blank_space": {
+                        "type": "Slice",
+                        "fieldset": "Blank Space",
+                        "description": "add margin or padding class name from bootstrap 5",
+                        "icon": "border_clear",
+                        "display": "list",
+                        "non-repeat": {
+                            "class_name": {
+                                "type": "Text",
+                                "config": {
+                                    "label": "Class name",
+                                    "placeholder": "Class name: as m-1, mt-5, p-2, pt-5 etc"
+                                }
+                            }
+                        },
+                        "repeat": {}
                     }
                 }
             }

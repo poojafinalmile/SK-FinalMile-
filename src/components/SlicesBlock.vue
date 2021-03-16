@@ -114,6 +114,14 @@
             <template v-else-if="slice.slice_type === 'case_study_slice'">
                 <case-study-slice :slice="slice"/>
             </template>
+            <!-- Profile Slice component -->
+            <template v-else-if="slice.slice_type === 'profile_slice'">
+                <profile-slice :slice="slice"/>
+            </template>
+            <!-- Blank Space component -->
+            <template v-else-if="slice.slice_type === 'blank_space'">
+                <blank-space :slice="slice"/>
+            </template>
         </section>
     </main>
 </template>
@@ -148,6 +156,8 @@ const CareerSlice = () => import("./slices/CareerSlice.vue");
 const SquareImageGallery = () => import("./slices/SquareImageGallery.vue");
 const RectangularImageGallery = () => import("./slices/RectangularImageGallery.vue");
 const CaseStudySlice = () => import("./slices/CaseStudySlice.vue");
+const ProfileSlice = () => import("./slices/ProfileSlice.vue");
+const BlankSpace = () => import("./slices/BlankSpace.vue");
 
 export default {
   props: ['slices'],
@@ -180,7 +190,9 @@ export default {
     CareerSlice,
     SquareImageGallery,
     RectangularImageGallery,
-    CaseStudySlice
+    CaseStudySlice,
+    ProfileSlice,
+    BlankSpace
   },
 }
 </script>
