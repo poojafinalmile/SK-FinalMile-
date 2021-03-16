@@ -1,7 +1,7 @@
 <template>
   <div class="row py-2 py-sm-2 py-md-3 py-lg-5">
     <div class="col-xl-8 col-lg-10 col-md-10 mx-auto text-center">
-      <prismic-rich-text class="heading-custom-color pb-md-2 mb-3 mb-md-4" :field="slice.primary.band_name"/>
+      <prismic-rich-text class="heading-custom-color pb-md-2 mb-2" :field="slice.primary.band_name"/>
       <prismic-rich-text class="title-custom-color mb-3 mb-md-4"  :field="slice.primary.title"/>
       <prismic-rich-text class="description mb-3 mb-md-4" :field="slice.primary.description_body"/>
       <template v-if="$prismic.richTextAsPlain(slice.primary.link_label) !== ''">
