@@ -52,7 +52,7 @@
             "type": "Slices",
             "fieldset": "Slice zone",
             "config": {
-                "labels": {},
+                "labels": null,
                 "choices": {
                     "text_section": {
                         "type": "Slice",
@@ -618,7 +618,7 @@
                             "eyebrow_headline": {
                                 "type": "StructuredText",
                                 "config": {
-                                    "multi": "paragraph, preformatted, heading1, heading2, heading3, heading4, heading5, heading6, strong, em, hyperlink, image, embed, list-item, o-list-item, o-list-item",
+                                    "multi": "paragraph, preformatted, heading1, heading2, heading3, heading4, heading5, heading6, strong, em, hyperlink, image, embed, list-item, o-list-item, rtl",
                                     "allowTargetBlank": true,
                                     "label": "Eyebrow headline"
                                 }
@@ -626,14 +626,15 @@
                             "title": {
                                 "type": "StructuredText",
                                 "config": {
-                                    "single": "heading1, heading2, heading3, heading4, heading5, heading6",
-                                    "label": "Title"
+                                    "multi": "paragraph, preformatted, heading1, heading2, heading3, heading4, heading5, heading6, strong, em, hyperlink, image, embed, list-item, o-list-item, rtl",
+                                    "label": "Title",
+                                    "placeholder": "Title"
                                 }
                             },
                             "description": {
                                 "type": "StructuredText",
                                 "config": {
-                                    "multi": "paragraph, preformatted, heading1, heading2, heading3, heading4, heading5, heading6, strong, em, hyperlink, image, embed, list-item, o-list-item, o-list-item",
+                                    "multi": "paragraph, preformatted, heading1, heading2, heading3, heading4, heading5, heading6, strong, em, hyperlink, image, embed, list-item, o-list-item, rtl",
                                     "allowTargetBlank": true,
                                     "label": "Description"
                                 }
@@ -657,6 +658,13 @@
                                     "multi": "paragraph, preformatted, heading1, heading2, heading3, heading4, heading5, heading6, strong, em, hyperlink, image, embed, list-item, o-list-item, o-list-item",
                                     "allowTargetBlank": true,
                                     "label": "Description"
+                                }
+                            },
+                            "year": {
+                                "type": "Text",
+                                "config": {
+                                    "label": "Year",
+                                    "placeholder": "2021"
                                 }
                             }
                         }
@@ -1247,6 +1255,51 @@
                             }
                         }
                     },
+                    "call_to_action": {
+                        "type": "Slice",
+                        "fieldset": "Call to action",
+                        "description": "A predesigned 'Call to action' for section for your site",
+                        "icon": "notifications_active",
+                        "display": "list",
+                        "non-repeat": {
+                            "icon_image": {
+                                "type": "Image",
+                                "config": {
+                                    "constraint": {},
+                                    "thumbnails": [],
+                                    "label": "Icon Image"
+                                }
+                            },
+                            "title": {
+                                "type": "StructuredText",
+                                "config": {
+                                    "single": "heading1, heading2, heading3, heading4, heading5, heading6",
+                                    "label": "Title"
+                                }
+                            },
+                            "paragraph": {
+                                "type": "StructuredText",
+                                "config": {
+                                    "multi": "paragraph, preformatted, heading1, heading2, heading3, heading4, heading5, heading6, strong, em, hyperlink, image, embed, list-item, o-list-item, o-list-item",
+                                    "label": "Paragraph"
+                                }
+                            },
+                            "button_link": {
+                                "type": "Link",
+                                "config": {
+                                    "label": "Button Link"
+                                }
+                            },
+                            "button_label": {
+                                "type": "Text",
+                                "config": {
+                                    "label": "Button Label",
+                                    "placeholder": "Text for button"
+                                }
+                            }
+                        },
+                        "repeat": {}
+                    },
                     "profile_slice": {
                         "type": "Slice",
                         "fieldset": "Profile Slice",
@@ -1335,6 +1388,29 @@
                                 "config": {
                                     "label": "Class name",
                                     "placeholder": "Class name: as m-1, mt-5, p-2, pt-5 etc"
+                                }
+                            }
+                        },
+                        "repeat": {}
+                    },
+                    "arrow_slice": {
+                        "type": "Slice",
+                        "fieldset": "Arrow Slice",
+                        "description": "Arrow Slice",
+                        "icon": "build",
+                        "display": "list",
+                        "non-repeat": {
+                            "arrow_direction": {
+                                "type": "Text",
+                                "config": {
+                                    "label": "Arrow direction",
+                                    "placeholder": "Up"
+                                }
+                            },
+                            "arrow_color": {
+                                "type": "Color",
+                                "config": {
+                                    "label": "Arrow color"
                                 }
                             }
                         },

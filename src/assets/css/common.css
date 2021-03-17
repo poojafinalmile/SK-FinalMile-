@@ -26,13 +26,10 @@ body {
 /* font size */
 
 .h1,
-h1 {
-    font-size: calc(1.15rem + 1.5vw);
-}
-
+h1,
 .h2,
 h2 {
-    font-size: calc(1.325rem + .9vw)
+    font-size: calc(1.15rem + 1.5vw);
 }
 
 .h3,
@@ -113,6 +110,14 @@ footer {
 
 .fm-black {
     color: #464646;
+}
+
+.fm-bg-purple {
+    background-color: #500778;
+}
+
+.fm-bg-pink {
+    background-color: #e10098;
 }
 
 img,
