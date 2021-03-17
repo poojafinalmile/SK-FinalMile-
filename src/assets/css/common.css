@@ -162,3 +162,7 @@ svg {
     color: white;
     font-size: 24px;
 }
+
+.n-mb-5 {
+    margin-bottom: -3rem;
+}

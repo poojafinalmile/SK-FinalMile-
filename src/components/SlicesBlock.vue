@@ -122,6 +122,14 @@
             <template v-else-if="slice.slice_type === 'blank_space'">
                 <blank-space :slice="slice"/>
             </template>
+            <!-- ArrowSlice component -->
+            <template v-else-if="slice.slice_type === 'arrow_slice'">
+                <arrow-slice :slice="slice"/>
+            </template>
+            <!-- Icon Area component -->
+            <template v-else-if="slice.slice_type === 'icon_area'">
+                <icon-area :slice="slice"/>
+            </template>
         </section>
     </main>
 </template>
@@ -158,6 +166,8 @@ const RectangularImageGallery = () => import("./slices/RectangularImageGallery.v
 const CaseStudySlice = () => import("./slices/CaseStudySlice.vue");
 const ProfileSlice = () => import("./slices/ProfileSlice.vue");
 const BlankSpace = () => import("./slices/BlankSpace.vue");
+const ArrowSlice = () => import("./slices/ArrowSlice.vue");
+const IconArea = () => import("./slices/IconArea.vue");
 
 export default {
   props: ['slices'],
@@ -192,7 +202,9 @@ export default {
     RectangularImageGallery,
     CaseStudySlice,
     ProfileSlice,
-    BlankSpace
+    BlankSpace,
+    ArrowSlice,
+    IconArea
   },
 }
 </script>

@@ -1415,6 +1415,88 @@
                             }
                         },
                         "repeat": {}
+                    },
+                    "icon_area": {
+                        "type": "Slice",
+                        "fieldset": "Icon Area",
+                        "description": "Icons, text, description",
+                        "icon": "insert_emoticon",
+                        "display": "list",
+                        "non-repeat": {
+                            "title": {
+                                "type": "StructuredText",
+                                "config": {
+                                    "multi": "paragraph, preformatted, heading1, heading2, heading3, heading4, heading5, heading6, strong, em, hyperlink, image, embed, list-item, o-list-item, rtl",
+                                    "label": "Title",
+                                    "placeholder": "Title"
+                                }
+                            },
+                            "title_color": {
+                                "type": "Color",
+                                "config": {
+                                    "label": "Title color"
+                                }
+                            },
+                            "description": {
+                                "type": "StructuredText",
+                                "config": {
+                                    "multi": "paragraph, preformatted, heading1, heading2, heading3, heading4, heading5, heading6, strong, em, hyperlink, image, embed, list-item, o-list-item, rtl",
+                                    "label": "Description",
+                                    "placeholder": "Description"
+                                }
+                            },
+                            "link": {
+                                "type": "Link",
+                                "config": {
+                                    "label": "Link",
+                                    "placeholder": "Link"
+                                }
+                            },
+                            "label": {
+                                "type": "StructuredText",
+                                "config": {
+                                    "multi": "paragraph, preformatted, heading1, heading2, heading3, heading4, heading5, heading6, strong, em, hyperlink, image, embed, list-item, o-list-item, rtl",
+                                    "label": "Label",
+                                    "placeholder": "Label"
+                                }
+                            },
+                            "color_set": {
+                                "type": "Color",
+                                "config": {
+                                    "label": "Color set"
+                                }
+                            },
+                            "color_set_hover": {
+                                "type": "Color",
+                                "config": {
+                                    "label": "Color set hover"
+                                }
+                            },
+                            "background_color": {
+                                "type": "Color",
+                                "config": {
+                                    "label": "Background color"
+                                }
+                            }
+                        },
+                        "repeat": {
+                            "image": {
+                                "type": "Image",
+                                "config": {
+                                    "constraint": {},
+                                    "thumbnails": [],
+                                    "label": "Image"
+                                }
+                            },
+                            "details": {
+                                "type": "StructuredText",
+                                "config": {
+                                    "multi": "paragraph, preformatted, heading1, heading2, heading3, heading4, heading5, heading6, strong, em, hyperlink, image, embed, list-item, o-list-item, rtl",
+                                    "label": "Details",
+                                    "placeholder": "Details"
+                                }
+                            }
+                        }
                     }
                 }
             }
