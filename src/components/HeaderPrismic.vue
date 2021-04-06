@@ -2,14 +2,14 @@
   <header class="site-header">
     <nav class="navbar navbar-expand-lg navbar-dark bg-trasparent mobile-modified">
       <div class="container-fluid">
-        <router-link to="/" class="logo ms-2 ms-md-3 ms-xl-5 text-white"><strong> final</strong>mile <img src="../assets/img/logo_footprint.png" alt="Finalmile" width="30" height="50"></router-link>
+        <router-link to="/" class="logo ms-2 ms-md-3 ms-xl-5 text-white"><strong> final</strong>mile <!-- <img src="../assets/img/logo_footprint.png" alt="Finalmile" width="30" height="50"> --></router-link>
         <button onclick="ColoredBackgroundFunction()" class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mobilenav" aria-controls="mobilenav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="mobilenav" onclick="AjaxFunction()">
           <ul class="navbar-nav pt-5 px-3 px-sm-4 px-lg-0 pt-lg-0 ms-auto me-xl-5">
             <li v-for="menuLink in menuLinks" :key="menuLink.id" class="nav-item">
-              <prismic-link :field="menuLink.link" index class="nav-link text-uppercase fadeInDown">{{ $prismic.richTextAsPlain(menuLink.label) }}</prismic-link>
+              <prismic-link :field="menuLink.link" class="nav-link text-uppercase fadeInDown">{{ $prismic.richTextAsPlain(menuLink.label) }}</prismic-link>
             </li>
           </ul>
         </div>
