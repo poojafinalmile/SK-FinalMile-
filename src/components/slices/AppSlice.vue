@@ -1,7 +1,7 @@
 <template>
- <div class="row py-2 py-sm-2 py-md-3 py-lg-5">
+ <div class="row py-2 py-sm-2 py-md-3 py-lg-5 mt-3 mt-md-0">
     <template  v-if="$prismic.richTextAsPlain(slice.primary.app_title) !== ''">
-      <div class="col-xxl-8 col-xl-12 col-lg-12 col-md-12 mx-auto text-center">
+      <div class="col-xxl-8 col-xl-8 col-lg-12 col-md-12 mx-auto text-center">
         <prismic-rich-text :field="slice.primary.app_title" :class="'pb-3 pb-lg-5'"/>
       </div>
     </template>

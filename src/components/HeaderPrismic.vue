@@ -2,7 +2,7 @@
   <header class="site-header">
     <nav class="navbar navbar-expand-lg navbar-dark bg-trasparent mobile-modified">
       <div class="container-fluid">
-        <router-link to="/" class="logo ms-2 ms-md-3 ms-xl-5 text-white"><strong> final</strong>mile <!-- <img src="../assets/img/logo_footprint.png" alt="Finalmile" width="30" height="50"> --></router-link>
+        <router-link to="/" class="logo letter-spacing-1-8 ms-2 ms-md-3 ms-xl-5 text-white"><strong> final</strong>mile <!-- <img src="../assets/img/logo_footprint.png" alt="Finalmile" width="30" height="50"> --></router-link>
         <button onclick="ColoredBackgroundFunction()" class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mobilenav" aria-controls="mobilenav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -68,12 +68,12 @@ export default {
     font-size: 50px;
   }
 }
-@media (min-width: 1200px) {
+@media (min-width: 1200px) and (max-width: 1399px) {
   .logo {
     font-size: 40px;
   }
 }
-@media (min-width: 992px) {
+@media (min-width: 992px) and (max-width: 1199px) {
   .navbar.mobile-modified {
     top: 15px;
   }

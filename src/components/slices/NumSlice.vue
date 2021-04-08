@@ -1,11 +1,11 @@
 <template>
- <div class="row py-3 py-md-3 py-lg-5 my-4 my-md-0 custom-bg-color">
+ <div class="row py-4 py-md-3 py-lg-5 mt-4 mt-sm-5 mb-4 mb-md-3 custom-bg-color">
     <template  v-if="$prismic.richTextAsPlain(slice.primary.number_slice_title) !== ''">
-      <div class="col-xxl-8 col-xl-12 col-lg-12 col-md-12 mx-auto text-center">
+      <div class="col-xxl-8 col-xl-8 col-lg-10 col-md-12 mx-auto text-center">
         <prismic-rich-text :field="slice.primary.number_slice_title" :class="'pb-3 pb-lg-5 text-white'"/>
       </div>
     </template>
-    <div class="col-xxl-8 col-xl-12 col-lg-12 col-md-12 mx-auto text-center">
+    <div class="col-xxl-8 col-xl-8 col-lg-10 col-md-12 mx-auto text-center">
       <div class="row">
           <div v-for="(item,index) in slice.items" :key="item.id" class="col-xl-4 col-lg-4 col-md-4 text-center">
              <div :class="'counter-'+ index"></div>
@@ -35,11 +35,6 @@ export default {
     font: 700 70px system-ui;
   }
  }
-@property --num {
-  syntax: "<integer>";
-  initial-value: 0;
-  inherits: false;
-}
 
 .counter-0 {
    -webkit-animation: counterzero 10s ;
@@ -84,12 +79,17 @@ export default {
 .counter-2::after {
   content: counter(num);
 }
+@property --num {
+  syntax: "<integer>";
+  initial-value: 0;
+  inherits: false;
+}
 @-webkit-keyframes counterzero {
   from {
     --num: 0;
   }
   to {
-    -webkit--num: 1000;
+    -webkit--num: 500000;
   }
 }
 
@@ -98,7 +98,7 @@ export default {
     --num: 0;
   }
   to {
-    --num: 1000;
+    --num: 500000;
   }
 }
 
@@ -107,7 +107,7 @@ export default {
     --num: 0;
   }
   to {
-    --num: 1000;
+    --num: 500000;
   }
 }
 
@@ -116,7 +116,7 @@ export default {
     --num: 0;
   }
   to {
-    -webkit--num: 4000;
+    -webkit--num: 374000;
   }
 }
 
@@ -125,7 +125,7 @@ export default {
     --num: 0;
   }
   to {
-    --num: 4000;
+    --num: 374000;
   }
 }
 
@@ -134,7 +134,7 @@ export default {
     --num: 0;
   }
   to {
-    --num: 4000;
+    --num: 374000;
   }
 }
 
@@ -143,7 +143,7 @@ export default {
     --num: 0;
   }
   to {
-    -webkit--num: 4000;
+    -webkit--num: 130000;
   }
 }
 
@@ -152,7 +152,7 @@ export default {
     --num: 0;
   }
   to {
-    --num: 4000;
+    --num: 130000;
   }
 }
 
@@ -161,7 +161,7 @@ export default {
     --num: 0;
   }
   to {
-    --num: 3000;
+    --num: 130000;
   }
 }
 </style>
