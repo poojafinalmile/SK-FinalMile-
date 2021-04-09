@@ -7,8 +7,15 @@
     </template>
     <div class="col-xxl-8 col-xl-8 col-lg-10 col-md-12 mx-auto text-center">
       <div class="row">
-          <div v-for="(item,index) in slice.items" :key="item.id" class="col-xl-4 col-lg-4 col-md-4 text-center">
-             <div :class="'counter-'+ index"></div>
+          <div v-for="item in slice.items" :key="item.id" class="col-xl-4 col-lg-4 col-md-4 text-center">
+             <div class="number">
+               <number
+                :from="0"
+                :to="item.number"
+                :format="theFormat"
+                :duration="15"
+                :delay="1"/>
+             </div>
              <P class="text-white pt-2">{{ item.title }}</p>
           </div>
       </div>
@@ -20,6 +27,11 @@
 export default {
   props: ['slice'],
   name: 'num-slice',
+   methods: {
+        theFormat(number) {
+            return number.toLocaleString("en", {minimumFractionDigits: 0,maximumFractionDigits: 0,});
+        }
+    }
 }
 </script>
 
@@ -27,143 +39,16 @@ export default {
 .custom-bg-color {
   background:#5b146f;
 }
-.counter-0, .counter-1, .counter-2 {
+.number span {
   font: 700 50px system-ui;
+  padding: 0rem;
+  color:#ffffff;
 }
 @media (min-width: 1200px) { 
-  .counter-0, .counter-1, .counter-2 {
+  .number span {
     font: 700 70px system-ui;
   }
  }
-
-.counter-0 {
-   -webkit-animation: counterzero 10s ;
-  -moz-animation: counterzero 10s ;
-  -ms-animation: counterzero 10s ;
-  animation: counterzero 10s ;
-  counter-reset: num var(--num);
-  animation-iteration-count: 1;
-  animation-fill-mode: forwards;
-  padding: 0rem;
-  color:#ffffff;
-}
-.counter-0::after {
-  content: counter(num);
-}
-
-.counter-1 {
-   -webkit-animation: counterone 10s ;
-  -moz-animation: counterone 10s ;
-  -ms-animation: counterone 10s ;
-  animation: counterone 10s ;
-  counter-reset: num var(--num);
-  animation-iteration-count: 1;
-  animation-fill-mode: forwards;
-  padding: 0rem;
-  color:#ffffff;
-}
-.counter-1::after {
-  content: counter(num);
-}
-.counter-2 {
-    -webkit-animation: countertwo 10s ;
-  -moz-animation: countertwo 10s ;
-  -ms-animation: countertwo 10s ;
-  animation: countertwo 10s ;
-  counter-reset: num var(--num);
-  animation-iteration-count: 1;
-  animation-fill-mode: forwards;
-  padding: 0rem;
-  color:#ffffff;
-}
-.counter-2::after {
-  content: counter(num);
-}
-@property --num {
-  syntax: "<integer>";
-  initial-value: 0;
-  inherits: false;
-}
-@-webkit-keyframes counterzero {
-  from {
-    --num: 0;
-  }
-  to {
-    -webkit--num: 500000;
-  }
-}
-
-@-moz-keyframes counterzero {
-  from {
-    --num: 0;
-  }
-  to {
-    --num: 500000;
-  }
-}
-
-@keyframes counterzero {
-  from {
-    --num: 0;
-  }
-  to {
-    --num: 500000;
-  }
-}
-
-@-webkit-keyframes counterone {
-  from {
-    --num: 0;
-  }
-  to {
-    -webkit--num: 374000;
-  }
-}
-
-@-moz-keyframes counterone {
-  from {
-    --num: 0;
-  }
-  to {
-    --num: 374000;
-  }
-}
-
-@keyframes counterone {
-  from {
-    --num: 0;
-  }
-  to {
-    --num: 374000;
-  }
-}
-
-@-webkit-keyframes countertwo {
-  from {
-    --num: 0;
-  }
-  to {
-    -webkit--num: 130000;
-  }
-}
-
-@-moz-keyframes countertwo {
-  from {
-    --num: 0;
-  }
-  to {
-    --num: 130000;
-  }
-}
-
-@keyframes countertwo {
-  from {
-    --num: 0;
-  }
-  to {
-    --num: 130000;
-  }
-}
 </style>
 
 

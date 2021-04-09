@@ -19,7 +19,7 @@
                     <textarea name="userMsg" class="form-control" placeholder="MESSAGE" style="width: 100%; height: 150px;"></textarea>
                 </div>
                 <div class="mt-3">
-                    <input type="file" class="form-control" value="Browse" name="avatar" id="cvFile" />
+                    <input type="file" class="form-control" value="Browse" name="file" id="cvFile" />
                 </div>
                  <div class="mt-3">
                     <input type="submit" name="Submit" class="btn btn-circle" value="Submit">

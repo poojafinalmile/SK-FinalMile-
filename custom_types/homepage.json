@@ -736,6 +736,13 @@
                                     "label": "title",
                                     "placeholder": "title"
                                 }
+                            },
+                            "number": {
+                                "type": "Number",
+                                "config": {
+                                    "label": "number",
+                                    "placeholder": "number"
+                                }
                             }
                         }
                     },

@@ -78,6 +78,7 @@ export default {
       menuLinks: [],
       contactLinks: [],
       contactTitle:[],
+      contactTitleSplit:[],
       contactSubtitle:[],
       contactDes:[],
       contactCopyright:[]
