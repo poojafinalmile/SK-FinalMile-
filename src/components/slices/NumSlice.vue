@@ -14,7 +14,8 @@
                 :to="item.number"
                 :format="theFormat"
                 :duration="15"
-                :delay="1"/>
+                :delay="1"
+                 easing="Power0.easeNone"/>
              </div>
              <P class="text-white pt-2">{{ item.title }}</p>
           </div>
