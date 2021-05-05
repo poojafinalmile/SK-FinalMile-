@@ -13,7 +13,7 @@
           <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12">
             <ul class="list-group list-group-flush ms-xl-5 mb-lg-0 mt-4 mt-sm-0 p-0">
               <li v-for="menuLink in menuLinks" :key="menuLink.id" class="text-lg-start text-md-start text-mb-start list-group-item bg-transparent border-bottom-0 m-0 p-1">
-                <prismic-link :field="menuLink.url" class="text-white text-decoration-none text-capitalize">{{ menuLink.link_title }}</prismic-link>
+                <prismic-link @click.native="scrollToTop" :field="menuLink.url" class="text-white text-decoration-none text-capitalize">{{ menuLink.link_title }}</prismic-link>
               </li>
             </ul>
           </div>
@@ -99,6 +99,9 @@ export default {
           this.contactCopyright = menuContent.data.copyright
         })
     },
+     scrollToTop() {
+        window.scrollTo(0,0);
+    }
   },
   created () {
     this.getMenu()
