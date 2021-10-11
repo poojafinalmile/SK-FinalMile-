@@ -8,7 +8,7 @@
     <title>finalMile</title>
     <meta name="description" content="finalmile">
     <meta name="author" content="Prismic">
-    <link rel="icon" href="<%= BASE_URL %>favicon.png">
+    <link rel="icon" href="<%= BASE_URL %>fmile.png">
     <script>
         window.prismic = {
             endpoint: 'https://FinalMileWebsite.prismic.io/api/v2'
@@ -50,6 +50,17 @@
                 element.className = classes.join(" ");
             }
         }
+    </script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-F1PGXW3NFC"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+        gtag('config', 'G-F1PGXW3NFC');
     </script>
 </head>
 
